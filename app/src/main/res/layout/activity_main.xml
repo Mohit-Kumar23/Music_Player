@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_music"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logo_img"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/logo_mp"
+        app:layout_constraintBottom_toTopOf="@+id/h2_guide"
+        app:layout_constraintEnd_toStartOf="@+id/v2_guide"
+        app:layout_constraintStart_toStartOf="@+id/v1_guide"
+        app:layout_constraintTop_toTopOf="@+id/h1_guide"
+        android:contentDescription="@string/music_player_logo" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v1_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.18" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v2_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.82" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h1_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.294" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h2_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.675" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_loading"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/h4_guide"
+        app:layout_constraintEnd_toStartOf="@+id/v2_guide"
+        app:layout_constraintStart_toStartOf="@+id/v1_guide"
+        app:layout_constraintTop_toTopOf="@+id/h3_guide"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/mp_loading"
+        app:lottie_speed="1.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h3_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h4_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

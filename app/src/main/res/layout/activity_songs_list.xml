@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_mainscreen"
+    tools:context=".SongsList">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/h1_guide_sl" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h1_guide_sl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.307" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h2_guide_sl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.01" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h3_guide_sl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.264" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v1_guide_sl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/headphone1"
+        app:layout_constraintBottom_toTopOf="@+id/h3_guide_sl"
+        app:layout_constraintEnd_toStartOf="@+id/v1_guide_sl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/h2_guide_sl" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h4_guide_sl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.09" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h5_guide_sl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.21" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v2_guide_sl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.21" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v3_guide_sl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.41" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_music_anim"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/h5_guide_sl"
+        app:layout_constraintEnd_toStartOf="@+id/v3_guide_sl"
+        app:layout_constraintStart_toStartOf="@+id/v2_guide_sl"
+        app:layout_constraintTop_toTopOf="@+id/h4_guide_sl"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/music_beats" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h6_guide_sl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.18" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v4_guide_sl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.68" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v5_guide_sl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.89" />
+
+    <ImageView
+        android:id="@+id/iv_stop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/h4_guide_sl"
+        app:layout_constraintEnd_toStartOf="@+id/v5_guide_sl"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/v4_guide_sl"
+        app:layout_constraintTop_toTopOf="@+id/h2_guide_sl"
+        app:layout_constraintVertical_bias="1.0"
+        android:src="@drawable/stop_player_icon" />
+
+    <ImageView
+        android:id="@+id/iv_play"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/exo_icon_play"
+        app:layout_constraintBottom_toTopOf="@+id/h6_guide_sl"
+        app:layout_constraintEnd_toStartOf="@+id/v5_guide_sl"
+        app:layout_constraintStart_toStartOf="@+id/v4_guide_sl"
+        app:layout_constraintTop_toTopOf="@+id/h4_guide_sl" />
+
+    <ImageView
+        android:id="@+id/iv_pause"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/exo_icon_pause"
+        app:layout_constraintBottom_toTopOf="@+id/h3_guide_sl"
+        app:layout_constraintEnd_toStartOf="@+id/v5_guide_sl"
+        app:layout_constraintStart_toStartOf="@+id/v4_guide_sl"
+        app:layout_constraintTop_toTopOf="@+id/h6_guide_sl" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
